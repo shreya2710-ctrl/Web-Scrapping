@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="favicon.gif" type="image/gif" sizes="16x16" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>scrappy</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" />
+    <!-- https://fonts.google.com/ -->
+    <link href="bootstrap.min.css" rel="stylesheet" />
+    <!-- https://getbootstrap.com/ -->
+    <!-- <link href="fontawesome/css/all.min.css" rel="stylesheet" /> -->
+    <!-- https://fontawesome.com/ -->
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div>
+        <div class="tm-row pt-4">
+            <div class="tm-col-left">
+                <div class="tm-site-header media">
+                    <img src="default.jpg" alt="Spider" height="80" width="200" href="scrappy.html" />
+                    <div class="media-body"></div>
+                </div>
+            </div>
+            <h1>SCRAPPY-THE TOOL</h1>
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-5 col-data px-5">
+                        <form id="reportForm" action="{{ url_for('advancedSearch') }}" method="POST">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="col-12 form-group col-req">
+                                        <form>
+                                            <span><strong
+														>Field
+													</strong></span
+												>
+												<select
+													class="form-control"
+													name="field"
+													id="field"
+												>
+													<option value="word">
+														Buzzword
+													</option>
+													<option value="author">
+														Author
+													</option>
+													<option value="catchdate">
+														Date
+													</option>
+													<option value="website">
+														Website
+													</option>
+												</select>
+												<br />
+												<span
+													><strong
+														>Parameter</strong
+													></span
+												>
+												<input
+													class="form-control"
+													type="text"
+													name="param"
+													id="param"
+												/>
+												<br />
+												<input
+													type="button"
+													value="Search"
+												/>
+											</form>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<h2
+							class="col-2 d-flex align-items-center justify-content-center"
+						>
+							OR
+						</h2>
+						<div class="col-5 px-5">
+							<form>
+								<h3>
+									<label for="site"
+										>Enter the website to be
+										scrapped--</label
+									>
+								</h3>
+								<select
+									class="form-control"
+									name="site"
+									id="site"
+								>
+									<option>Website name</option>
+									<option>
+										file:///home/evan/Documents/reddit1.html
+									</option>
+									<option>
+										file:///home/evan/Documents/4chan.html
+									</option></select
+								><br />
+								<input type="button" value="Search" />
+							</form>
+						</div>
+					</div>
+				</div>
+				<br><br><br><br><br><br><br>
+				<footer>
+					<div class="footer-copyright text-center py-3">
+						2021Copyright ©.. All Rights Reserved.
+					</div>
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>
